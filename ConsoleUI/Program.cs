@@ -30,7 +30,7 @@ namespace ConsoleUI
             };
             vehicles.Add(jimsMotorcycle);
 
-            var batMobile = new Car() 
+            Vehicle batMobile = new Car()   
             {
                 Make = "Mustang",
                 Year = "2023",
@@ -40,13 +40,15 @@ namespace ConsoleUI
             };
             vehicles.Add(batMobile);
 
-            var stuntBike = new Motorcycle()
+            Vehicle stuntBike = new Motorcycle()
             {
                 Make = "Stuntster",
                 Year = "1987",
                 Model = "Menace",
                 HasSideCart = false,
-                CanWheelie = true
+                CanWheelie = true,
+                //HasAirBag = false         this does not work bc when we did Vehicle stuntbike = new Motercycle, we are using the class Car inherited with the Vehicle Class. Since Has
+                                            //HasAirBag is created in the Car class so it ONLY exist in the Car Class.
             };
             vehicles.Add(stuntBike);
 
